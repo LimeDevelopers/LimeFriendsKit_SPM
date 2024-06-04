@@ -16,8 +16,7 @@ public class BaseLabel : UILabel {
             setNeedsDisplay() // 콘텐츠가 변경되었을때 변경사항을 반영하도록 지시 -> draw 메서드 다시 호출 -> UI 그림
         }
     }
-    /// UILabel 셋팅
-    /// - Parameters:
+    /// - Parameters: UILabel 셋팅
     ///   - text: 텍스트
     ///   - customFont: 텍스트 폰트
     ///   - fontSize: 텍스트 사이즈
@@ -63,9 +62,7 @@ public class BaseLabel : UILabel {
         
     }
     
-    
-    /// UILabel에서 특정한 부분을 강조하고 싶거나 색상을 바꿔주고 싶을때
-    /// - Parameters:
+    /// - Parameters: UILabel에서 특정한 부분을 강조하고 싶거나 색상을 바꿔주고 싶을때
     ///   - baseString: 전체 Label
     ///   - basic: 강조되지 않을 Label
     ///   - basicFontSize: 강조하고 싶지 않은 Label의 사이즈

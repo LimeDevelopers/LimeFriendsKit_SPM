@@ -8,9 +8,8 @@
 import UIKit
 
 public class BaseTextField : UITextField {
-    
-    /// TextField 셋팅
-    /// - Parameters:
+
+    /// - Parameters: TextField 셋팅
     ///   - placeHolder: 플레이스홀더
     ///   - textColor: 텍스트 색상
     ///   - tintColor: Tint 색상

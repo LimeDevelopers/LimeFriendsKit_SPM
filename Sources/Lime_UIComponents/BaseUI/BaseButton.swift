@@ -8,8 +8,8 @@
 import UIKit
 
 public class BaseButton: UIButton {
-    /// UIButton - 버튼 텍스트, 버튼 색, 버튼 배경색, 버튼 폰트, 버튼 폰트 사이즈, CornerRadius
-    /// - Parameters:
+    
+    /// - Parameters: UIButton - 버튼 텍스트, 버튼 색, 버튼 배경색, 버튼 폰트, 버튼 폰트 사이즈, CornerRadius
     ///   - text: 버튼 텍스트
     ///   - textColor:  버튼 텍스트 컬러
     ///   - bgColor: 버튼 배경색
@@ -68,9 +68,7 @@ public class BaseButton: UIButton {
         }
     }
     
-    
-    /// Tag가 필요한 Button
-    /// - Parameters:
+    /// - Parameters: Tag가 필요한 Button
     ///   - title: 타이틀
     ///   - titleColor: 타이틀 색상
     ///   - tag: 태그
@@ -84,8 +82,8 @@ public class BaseButton: UIButton {
         self.titleLabel?.font = UIFont.systemFont(ofSize: fontsize, weight: font)
     }
     
-    /// SNS Login Button 셋팅
-    /// - Parameter snsLogin: SNS name
+    ///
+    /// - Parameter snsLogin: SNS Login Button 셋팅
     public init(snsLogin: String) {
         super.init(frame: .zero)
         self.setTitle("", for: .normal)

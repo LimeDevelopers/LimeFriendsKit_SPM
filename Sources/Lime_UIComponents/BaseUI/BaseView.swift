@@ -28,9 +28,8 @@ public class BaseView : UIView {
     public func setConstraints() {
         
     }
-    
-    /// View 상단에만 Corenr 적용 -> View에서 layoutSubViews에서 적용
-    /// - Parameters:
+
+    /// - Parameters: View 상단에만 Corenr 적용 -> View에서 layoutSubViews에서 적용
     ///   - view: 원하는 View
     ///   - radius: radius 값
     public func applyTopCornersRadius(view: UIView, radius: CGFloat) {
