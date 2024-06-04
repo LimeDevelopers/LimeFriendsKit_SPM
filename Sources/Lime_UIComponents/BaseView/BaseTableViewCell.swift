@@ -8,21 +8,21 @@
 import UIKit
 
 open class BaseTableViewCell: UITableViewCell {
-    public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+    open override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         configure()
         setConstraints()
     }
     
-    public required init?(coder: NSCoder) {
+    open required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func configure() {
+    open func configure() {
         self.selectionStyle = .none
     }
     
-    public func setConstraints() {
+    open func setConstraints() {
         
     }
 }

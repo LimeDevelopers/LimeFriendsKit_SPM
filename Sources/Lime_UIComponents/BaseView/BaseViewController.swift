@@ -9,34 +9,41 @@ import UIKit
 
 open class BaseViewController : UIViewController {
     
-    public override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         configure()
         setConstraints()
     }
     
     /// 셋팅
-    public func configure() {
+    open func configure() {
         self.view.backgroundColor = .white
-        self.navigationItem.backButtonDisplayMode = .minimal
+        if #available(iOS 14.0, *) {
+            self.navigationItem.backButtonDisplayMode = .minimal
+        } else {
+            // Fallback on earlier versions
+        }
         self.navigationController?.navigationBar.tintColor = .black
         
         // 네비게이션 바의 외관을 정의하는 UINavigationBarAppearance 객체 생성
-        let appearance = UINavigationBarAppearance()
-        
-        // 네비게이션 바의 배경색을 흰색으로 설정
-        appearance.backgroundColor = .white
-        
-        // 네비게이션 바의 하단 경계선을 제거하기 위한 설정
-        appearance.shadowColor = nil // 경계선 색상을 nil로 설정하여 제거
+        if #available(iOS 13.0, *) {
+            let appearance = UINavigationBarAppearance()
+            // 네비게이션 바의 배경색을 흰색으로 설정
+            appearance.backgroundColor = .white
+            
+            // 네비게이션 바의 하단 경계선을 제거하기 위한 설정
+            appearance.shadowColor = nil // 경계선 색상을 nil로 설정하여 제거
 
-        // 네비게이션 바에 위에서 설정한 외관을 적용
-        navigationController?.navigationBar.standardAppearance = appearance
-        navigationController?.navigationBar.scrollEdgeAppearance = appearance // 스크롤 시에도 동일한 외관 적용
+            // 네비게이션 바에 위에서 설정한 외관을 적용
+            navigationController?.navigationBar.standardAppearance = appearance
+            navigationController?.navigationBar.scrollEdgeAppearance = appearance // 스크롤 시에도 동일한 외관 적용
+        } else {
+            // Fallback on earlier versions
+        }
     }
     
     /// 레이아웃
-    public func setConstraints() {
+    open func setConstraints() {
         
     }
     
