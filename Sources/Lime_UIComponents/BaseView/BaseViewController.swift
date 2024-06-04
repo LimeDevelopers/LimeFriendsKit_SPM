@@ -9,7 +9,7 @@ import UIKit
 
 open class BaseViewController : UIViewController {
     
-    open override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         configure()
         setConstraints()
