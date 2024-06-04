@@ -6,18 +6,19 @@ import PackageDescription
 let package = Package(
     name: "LimeFriendsKit_SPM",
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "LimeFriendsKit_SPM",
-            targets: ["LimeFriendsKit_SPM"]),
+            name: "Lime_UIComponents",
+            targets: ["Lime_UIComponents"]),
+    ],
+    dependencies: [
+        // Alamofire 패키지를 종속성으로 추가합니다.
+        .package(url: "https://github.com/SnapKit/SnapKit.git", from : "5.0.1"),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "LimeFriendsKit_SPM"),
-        .testTarget(
-            name: "LimeFriendsKit_SPMTests",
-            dependencies: ["LimeFriendsKit_SPM"]),
+            name: "Lime_UIComponents", dependencies: ["SnapKit"]),
+//        .testTarget(
+//            name: "LimeFriendsKit_SPMTests",
+//            dependencies: ["LimeFriendsKit_SPM"]),
     ]
 )
