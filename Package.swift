@@ -13,6 +13,7 @@ let package = Package(
     dependencies: [
         // Alamofire 패키지를 종속성으로 추가합니다.
         .package(url: "https://github.com/SnapKit/SnapKit.git", from : "5.0.1"),
+        .package(url: "https://github.com/LimeDevelopers/LimeFriendsKit_SPM.git", from: "1.0.1")
     ],
     targets: [
         .target(

@@ -8,5 +8,5 @@
 import Foundation
 
 open class ExampleDependency {
-    static let text: String = "의존성 자동 업데이트"
+    public static let text: String = "의존성 자동 업데이트"
 }
