@@ -1,25 +1,26 @@
 //
 //  File.swift
-//  
+//
 //
 //  Created by Limefriends on 6/4/24.
 //
 
 import UIKit
 
+/// 날짜 형식
+public enum DateFormatType {
+    case yearMonthDay // 월 년 일
+    case yearMonthDayHourMinute // 월 년 일 시 분
+    case hourMinute // 시 분
+}
+
+
 public extension String {
-    
-    /// 날짜 형식
-    enum DateFormatType {
-        case yearMonthDay // 월 년 일
-        case yearMonthDayHourMinute // 월 년 일 시 분
-        case hourMinute // 시 분
-    }
-    
+
     
     /// "2024-06-19 24:00:00" 형식으로 Response 값 지정
     /// - Parameter format: 날짜 형식
-    public func releaseDateFormat(format: DateformatType) -> String {
+    func releaseDateFormat(format: DateFormatType) -> String {
         let componentArray = self.components(separatedBy: " ")
         let timeSeparator = componentArray[1].components(separatedBy: ":")
         guard componentArray.count > 1 else {
