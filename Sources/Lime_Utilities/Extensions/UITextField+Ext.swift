@@ -7,11 +7,10 @@
 
 import UIKit
 
-public extension TextField {
-    
+public extension UITextField {
     
     /// 텍스틑 필드 왼쪽 padding 적용
-    public func addleftPadding() {
+    func addleftPadding() {
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: self.frame.height))
         self.leftView = paddingView
         self.leftViewMode = ViewMode.always
