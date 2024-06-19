@@ -19,7 +19,7 @@ let package = Package(
     targets: [
         .target(
             name: "Lime_UIComponents", dependencies: ["SnapKit"]),
-        .target(name: "Lime_Utilities")
+        .target(name: "Lime_Utilities", dependencies: [])
 //        .testTarget(
 //            name: "LimeFriendsKit_SPMTests",
 //            dependencies: []),
